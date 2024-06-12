@@ -1,0 +1,60 @@
+设a为int型变量，执行下列赋值语句后，a的取值分别是（ ）
+
+a=125.534;   a=(int)125.521%4;    a=5<<2;
+
+A
+125,31,1
+B
+125,1,20
+C
+125,31,20
+D
+125.534,2,20
+正确答案：B
+
+a=5(00000101)  左移两位后：(00010100)=20
+
+stract( 字符数组1，字符数组2)串连函数
+
+strcpy/strncpy （字符数组1，字符数组2）复制函数
+
+strcmp( 字符串1，字符串2)字符串比较函数
+
+strlen( 字符数组)测字符数组函数
+
+下列代码的输出是（）
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+#include<stdio.h>
+ 
+int main() {
+    const char *c[] = {"HELLO", "NEW", "WORLD", "SAYHI"};
+    const char **cp[] = {c + 3, c + 2, c + 1, c};
+    const char ***cpp = cp;
+    printf("%s,", **++cpp);
+    printf("%s,", *--*++cpp + 3);
+    printf("%s,", *cpp[-2] + 3);
+    printf("%s\n", cpp[-1][-1] + 1);
+    return 0;
+}
+
+
+A
+WORLD,LO,SAYHI,EW
+B
+WORLD,LO,HI,NEW
+C
+NEW,LO,SAYHI,EW
+D
+WORLD,LO,HI,EW
+正确答案：D
